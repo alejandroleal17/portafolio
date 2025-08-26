@@ -1,39 +1,281 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Presentación | Mi Sitio</title>
-    <link rel="stylesheet" href="src/styles.css" />
-  </head>
-  <body>
-    <header class="container">
-      <h1>Mi Presentación</h1>
-      <p class="subtitle">Subtítulo o eslogan</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeanDevOs Profesional</title>
+  
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="src/styles.css">
+  
+  <!-- Font Awesome (desde CDN) -->
+  <link 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+    rel="stylesheet"
+  >
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/logo.png" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+</head>
+
+<body>
+    <!-- Header con navegación y selector de idioma -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>BeanDevOs</h1>
+                
+            </div>
+            <div class="nav-menu">
+                <a href="#inicio" class="nav-link" data-es="Inicio" data-en="Home"></a>
+                <a href="#servicios" class="nav-link" data-es="Servicios" data-en="Services"></a>
+                <a href="#tecnologias" class="nav-link" data-es="Tecnologías" data-en="Technologies"></a>
+                <a href="#contacto" class="nav-link" data-es="Contacto" data-en="Contact"></a>
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="es">ES</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+        </nav>
     </header>
-    <main class="container">
-      <section>
-        <h2>Sobre mí / Proyecto</h2>
-        <p>Describe aquí el objetivo de la presentación.</p>
-      </section>
-      <section class="grid">
-        <div>
-          <h3>Punto clave 1</h3>
-          <p>Descripción breve.</p>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title" data-es="Soluciones Tecnológicas Integrales" data-en="Comprehensive Technology Solutions"></h2>
+                <p class="hero-description" data-es="Especialista en desarrollo web, infraestructura cloud, seguridad informática y sistemas de analítica visual." data-en="Specialist in web development, cloud infrastructure, IT security, and visual analytics systems."></p>
+                <div class="hero-buttons">
+                    <a href="#servicios" class="btn btn-primary" data-es="Ver Servicios" data-en="View Services"></a>
+                    <a href="#contacto" class="btn btn-secondary" data-es="Contactar" data-en="Contact"></a>
+                </div>
+            </div>
         </div>
-        <div>
-          <h3>Punto clave 2</h3>
-          <p>Descripción breve.</p>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2 class="section-title" data-es="Servicios Profesionales" data-en="Professional Services"></h2>
+            
+            <div class="services-grid">
+                <!-- Desarrollo -->
+                <div class="service-card desarrollo-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 data-es="Desarrollo Web" data-en="Web Development"></h3>
+                    <p data-es="Sitios web responsivos, aplicaciones web y APIs RESTful" data-en="Responsive websites, web applications and RESTful APIs"></p>
+                    <div class="service-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PHP</span>
+                    </div>
+                </div>
+
+                <!-- Base de Datos -->
+                <div class="service-card database-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 data-es="Bases de Datos" data-en="Databases"></h3>
+                    <p data-es="Diseño, implementación y optimización de bases de datos" data-en="Database design, implementation and optimization"></p>
+                    <div class="service-tech">
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">BigQuery</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">RDS</span>
+                    </div>
+                </div>
+
+                <!-- Infraestructura -->
+                <div class="service-card infra-card">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 data-es="Infraestructura" data-en="Infrastructure"></h3>
+                    <p data-es="Administración de servidores Windows/Linux y servicios cloud" data-en="Windows/Linux server administration and cloud services</p>
+                    <div class="service-tech">
+                        <span class="tech-tag">Windows Server</span>
+                        <span class="tech-tag">Linux</span>
+                        <span class="tech-tag">VoIP</span>
+                        <span class="tech-tag">Elasticsearch</span>
+                    </div>
+                </div>
+
+                <!-- Visión Artificial -->
+                <div class="service-card vision-card">
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 data-es="Analítica Visual" data-en="Visual Analytics"></h3>
+                    <p data-es="Sistemas de cámaras Hikvision y análisis de imágenes" data-en="Hikvision camera systems and image analysis</p>
+                    <div class="service-tech">
+                        <span class="tech-tag">Hikvision</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">AI/ML</span>
+                    </div>
+                </div>
+                <br>
+                <!-- Seguridad -->
+                <div class="service-card security-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-es="Ciberseguridad" data-en="Cybersecurity"></h3>
+                    <p data-es="Auditorías de seguridad, pentesting y protección de datos" data-en="Security audits, pentesting and data protection</p>
+                    <div class="service-tech">
+                        <span class="tech-tag">Penetration Testing</span>
+                        <span class="tech-tag">Security Audits</span>
+                        <span class="tech-tag">Data Protection</span>
+                    </div>
+                </div>
+                <br>
+                <!-- DevOps -->
+                <div class="service-card devops-card">
+                    <div class="service-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3 data-es="DevOps & Cloud" data-en="DevOps & Cloud"></h3>
+                    <p data-es="Automatización, CI/CD y gestión de infraestructura como código" data-en="Automation, CI/CD and infrastructure as code</p>
+                    <div class="service-tech">
+                        <span class="tech-tag">CI/CD</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">AWS/Azure</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-          <h3>Punto clave 3</h3>
-          <p>Descripción breve.</p>
+    </section>
+
+    <!-- Sección de Tecnologías -->
+    <section id="tecnologias" class="technologies">
+        <div class="container">
+            <h2 class="section-title" data-es="Stack Tecnológico" data-en="Technology Stack"></h2>
+            
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3 data-es="Frontend" data-en="Frontend"></h3>
+                    <div class="tech-list">
+                        <div class="tech-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3 data-es="Backend" data-en="Backend"></h3>
+                    <div class="tech-list">
+                        <div class="tech-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3 data-es="Bases de Datos" data-en="Databases"></h3>
+                    <div class="tech-list">
+                        <div class="tech-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>BigQuery</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>RDS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3 data-es="Infraestructura" data-en="Infrastructure"></h3>
+                    <div class="tech-list">
+                        <div class="tech-item">
+                            <i class="fab fa-windows"></i>
+                            <span>Windows Server</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-linux"></i>
+                            <span>Linux</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-phone"></i>
+                            <span>VoIP</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-search"></i>
+                            <span>Elasticsearch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
-    </main>
-    <footer class="container">
-      <p>© 2025 Tu Nombre</p>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-es="Contacto" data-en="Contact"></h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <h4 data-es="Nombre" data-en="Name"></h4>
+                            <p>Alejandro Leal</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 data-es="Email" data-en="Email"></h4>
+                            <p><a href="mailto:alejandro_leal17@hotmail.com">alejandro_leal17@hotmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 BeanDevOs. <span data-es="Todos los derechos reservados" data-en="All rights reserved"></span></p>
+        </div>
     </footer>
+
     <script src="src/script.js"></script>
-  </body>
+</body>
 </html>
